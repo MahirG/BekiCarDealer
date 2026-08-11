@@ -1,0 +1,152 @@
+name: Recover legacy content
+
+on:
+  push:
+    branches:
+      - agent/recover-legacy-content
+
+permissions:
+  contents: write
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Extract exact legacy content
+        shell: python
+        run: |
+          import ast, json, re, subprocess
+          from html.parser import HTMLParser
+          from pathlib import Path
+
+          commit = "89496a31d47ad6d6529361f75f8d20694cd8ed53"
+          path = "beki-autocar-futuristic-1.html"
+          source = subprocess.check_output(["git", "show", f"{commit}:{path}"], text=True, errors="replace")
+          sanitized = re.sub(r'(data:[^;\"\']+;base64,)[A-Za-z0-9+/=\s]+', r'\1[EMBEDDED_DATA]', source)
+
+          class Extractor(HTMLParser):
+              def __init__(self):
+                  super().__init__(convert_charrefs=True)
+                  self.stack = []
+                  self.skip_depth = 0
+                  self.items = []
+                  self.meta = []
+                  self.images = []
+                  self.links = []
+                  self.controls = []
+              def handle_starttag(self, tag, attrs):
+                  d = dict(attrs)
+                  self.stack.append(tag)
+                  if tag in {"style", "script", "svg", "noscript"}:
+                      self.skip_depth += 1
+                  if tag == "meta":
+                      keep = {k:v for k,v in d.items() if k in {"name","property","content"} and v is not None}
+                      if keep: self.meta.append(keep)
+                  if tag == "img":
+                      self.images.append({k:v for k,v in d.items() if k in {"src","alt","title","width","height"} and v is not None})
+                  if tag == "a":
+                      self.links.append({k:v for k,v in d.items() if k in {"href","title","aria-label","target"} and v is not None})
+                  if tag in {"input","textarea","select","option","button"}:
+                      keep = {k:v for k,v in d.items() if k in {"type","name","value","placeholder","aria-label","title","id"} and v is not None}
+                      keep["tag"] = tag
+                      self.controls.append(keep)
+              def handle_startendtag(self, tag, attrs):
+                  self.handle_starttag(tag, attrs)
+                  self.handle_endtag(tag)
+              def handle_endtag(self, tag):
+                  if tag in {"style", "script", "svg", "noscript"} and self.skip_depth:
+                      self.skip_depth -= 1
+                  if self.stack:
+                      if self.stack[-1] == tag:
+                          self.stack.pop()
+                      elif tag in self.stack:
+                          i = len(self.stack) - 1 - self.stack[::-1].index(tag)
+                          del self.stack[i:]
+              def handle_data(self, data):
+                  if self.skip_depth: return
+                  text = " ".join(data.split())
+                  if text:
+                      self.items.append({"tag": self.stack[-1] if self.stack else "", "text": text})
+
+          ex = Extractor()
+          ex.feed(source)
+          visible = []
+          for item in ex.items:
+              if not visible or visible[-1] != item:
+                  visible.append(item)
+
+          scripts = re.findall(r'<script[^>]*>(.*?)</script\s*>', sanitized, flags=re.I|re.S)
+          script_text = "\n\n/* --- SCRIPT BLOCK --- */\n\n".join(scripts)
+
+          # Harvest quoted strings from inline JavaScript so dynamic inventory/spec copy is preserved too.
+          raw_strings = []
+          string_re = re.compile(r'''(?P<q>["'`])(?P<s>(?:\\.|(?!\1).)*?)(?P=q)''', re.S)
+          for script in scripts:
+              for m in string_re.finditer(script):
+                  s = m.group('s')
+                  s = re.sub(r'\\[nrt]', ' ', s)
+                  s = re.sub(r'\\(["\'`\\])', r'\1', s)
+                  s = ' '.join(s.split())
+                  if len(s) >= 2 and not s.startswith(('http://www.w3.org/', 'data:image')):
+                      raw_strings.append(s)
+          script_strings = []
+          seen = set()
+          for s in raw_strings:
+              if s not in seen:
+                  seen.add(s)
+                  script_strings.append(s)
+
+          compact_meta = []
+          for item in ex.meta:
+              clean = dict(item)
+              if clean.get('content','').startswith('data:'):
+                  clean['content'] = '[EMBEDDED_DATA]'
+              compact_meta.append(clean)
+          compact_images = []
+          for item in ex.images:
+              clean = dict(item)
+              if clean.get('src','').startswith('data:'):
+                  clean['src'] = '[EMBEDDED_DATA]'
+              compact_images.append(clean)
+
+          out = Path("recovery")
+          out.mkdir(exist_ok=True)
+          (out / "visible-content.json").write_text(json.dumps({
+              "visible": visible,
+              "meta": ex.meta,
+              "links": ex.links,
+              "images": ex.images,
+              "controls": ex.controls,
+          }, ensure_ascii=False, indent=2), encoding="utf-8")
+          (out / "compact-content.json").write_text(json.dumps({
+              "visible": visible,
+              "meta": compact_meta,
+              "links": ex.links,
+              "images": compact_images,
+              "controls": ex.controls,
+              "script_strings": script_strings,
+          }, ensure_ascii=False, indent=2), encoding="utf-8")
+          (out / "legacy-sanitized.html").write_text(sanitized, encoding="utf-8")
+          (out / "legacy-scripts.txt").write_text(script_text, encoding="utf-8")
+          (out / "stats.json").write_text(json.dumps({
+              "source_bytes": len(source.encode("utf-8")),
+              "sanitized_bytes": len(sanitized.encode("utf-8")),
+              "visible_items": len(visible),
+              "links": len(ex.links),
+              "images": len(ex.images),
+              "controls": len(ex.controls),
+              "script_blocks": len(scripts),
+              "script_strings": len(script_strings),
+          }, indent=2), encoding="utf-8")
+
+      - name: Commit recovery output
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add recovery/
+          git commit -m "Extract complete original legacy site content" || exit 0
+          git push
