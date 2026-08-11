@@ -1,0 +1,1820 @@
+
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AutoDealer",
+      "@id": "https://bekiautocar.com/#dealer",
+      "name": "BEKI AUTOCAR",
+      "alternateName": ["Beki Auto Car", "ቤኪ ኦቶካር", "Beki Mekina", "BEKI Car Broker Ethiopia"],
+      "description": "Ethiopia's #1 luxury and exotic car brokerage in Addis Ababa. Buy & sell Toyota Land Cruiser, Hilux, BYD, Mercedes, BMW and premium SUVs. Sourcing pristine vehicles from Japan, UAE, and Europe. Commission-free service.",
+      "url": "https://bekiautocar.com",
+      "telephone": "+251-000-000-000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Addis Ababa",
+        "addressLocality": "Addis Ababa",
+        "addressRegion": "Addis Ababa",
+        "addressCountry": "ET"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 9.0054,
+        "longitude": 38.7636
+      },
+      "openingHours": "Mo-Sa 08:00-19:00",
+      "priceRange": "$$$$",
+      "areaServed": ["Ethiopia", "Addis Ababa", "Dire Dawa", "Hawassa", "Bahir Dar"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Cars for Sale and Rent in Ethiopia",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Toyota Land Cruiser for Sale Ethiopia"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Toyota Hilux for Sale Ethiopia"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Toyota Prado for Sale Ethiopia"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "BYD Electric Cars Ethiopia"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Luxury SUV for Sale Addis Ababa"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Used Cars for Sale Ethiopia 2026"}}
+        ]
+      },
+      "sameAs": [
+        "https://t.me/bekiautocar",
+        "https://www.instagram.com/bekiautocar",
+        "https://www.facebook.com/bekiautocar"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://bekiautocar.com/#website",
+      "url": "https://bekiautocar.com",
+      "name": "BEKI AUTOCAR – Cars for Sale Ethiopia",
+      "description": "Buy and sell luxury cars in Ethiopia. Toyota, BYD, SUVs and more. Ethiopian car marketplace Addis Ababa.",
+      "inLanguage": ["en", "am"],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://bekiautocar.com/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where can I buy cars for sale in Ethiopia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BEKI AUTOCAR is Ethiopia's top car brokerage in Addis Ababa. Browse luxury Toyota, BYD, SUVs and used mekina for sale. Commission-free, direct from owner."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Toyota mekina for sale Ethiopia – where to find?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Find Toyota Land Cruiser, Hilux, Prado, C-HR, Rush and more at BEKI AUTOCAR – Addis Ababa's trusted luxury car broker. Visit bekiautocar.com or Telegram @bekiautocar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the price of used cars in Ethiopia 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Used car prices in Ethiopia (2026) range from ETB 1.5M for small hatchbacks to ETB 20M+ for luxury Land Cruisers. BEKI AUTOCAR offers competitive prices with full transparency."
+          }
+        }
+      ]
+    }
+  ]
+}
+
+
+/* --- SCRIPT BLOCK --- */
+
+
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'en,am,om',
+    autoDisplay: false
+  }, 'google_translate_element');
+}
+function triggerGTranslate(langCode) {
+  /* Map our codes to Google's lang codes */
+  var map = { en: 'en', am: 'am', om: 'om' };
+  var target = map[langCode] || langCode;
+  if (target === 'en') {
+    /* Restore original — reload without cookie */
+    var c = document.cookie.split(';');
+    for (var i = 0; i < c.length; i++) {
+      var name = c[i].trim().split('=')[0];
+      if (name === 'googtrans') {
+        document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+        document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + location.hostname + ';';
+      }
+    }
+    location.reload();
+    return;
+  }
+  /* Set the googtrans cookie then reload */
+  var val = '/en/' + target;
+  document.cookie = 'googtrans=' + val + '; path=/;';
+  document.cookie = 'googtrans=' + val + '; path=/; domain=' + location.hostname + ';';
+  location.reload();
+}
+
+
+/* --- SCRIPT BLOCK --- */
+
+
+
+/* --- SCRIPT BLOCK --- */
+
+
+  (function(){
+    const CARS = [
+      {
+        id:11, make:'Toyota', model:'Hilux Revo', year:2019,
+        img:'data:image/jpeg;base64,[EMBEDDED_DATA]',
+        gallery:[
+          {src:'data:image/jpeg;base64,[EMBEDDED_DATA]',    alt:'Passenger-side profile — sport canopy & alloy wheels'},
+          {src:'data:image/jpeg;base64,[EMBEDDED_DATA]',   alt:'Bold front face — honeycomb grille & LED headlights'},
+          {src:'data:image/jpeg;base64,[EMBEDDED_DATA]', alt:'Driver-side three-quarter view — Hilux stance'}
+        ],
+        category:'sale', price:6800000, priceLabel:'6.8M ETB',
+        transmission:'Automatic', fuel:'Diesel', mileage:'62,000 km',
+        urgent:false,
+        bodyType:'Double-Cab Pickup',
+        engine:'2.4L Diesel 150HP',
+        driveType:'4WD',
+        gasMileage:'12 KM/L',
+        plateNo:'3AZ*** A',
+        condition:'Very Good',
+        origin:'Japan Import',
+        contact:'0912 387 513',
+        telegramNote:'ተጨማሪ የፎቶ እና ዋጋ ዝርዝር ለማወቅ የቴሌግራም ቻናላችንን ይቀላቀሉ',
+        telegramLink:'https://t.me/bekiautocar',
+        features:[
+          'Sport Hardtop Canopy',
+          'All-Terrain Alloy Wheels',
+          'LED Headlights & DRL',
+          'Tinted Windows',
+          'Side Steps / Running Boards',
+          'Mud Flaps All Round',
+          'Reverse Camera',
+          'Bluetooth Infotainment',
+          'Dual Airbags',
+          'ABS with EBD',
+          '4WD High & Low Range',
+          'Roof Rails'
+        ],
+        desc:'Powerful 2019 Toyota Hilux Revo Double Cab in gun-metal grey. Japan import, full 4WD with high/low range. 2.4L diesel engine, 62,000 km. Fitted with sport hardtop canopy, all-terrain alloy wheels, LED lighting, reverse camera, Bluetooth. Immaculate inside and out. Plate 3AZ*** A. Price negotiable. Contact 0912 387 513.'
+      },
+      {
+        id:10, make:'Hyundai', model:'Tucson', year:2022,
+        img:'data:image/jpeg;base64,[EMBEDDED_DATA]',
+        category:'sale', price:5400000, priceLabel:'5.4M ETB',
+        transmission:'8-Speed Automatic', fuel:'Benzine (Petrol)', mileage:'40,000 km',
+        urgent:true,
+        badge:'Urgent Sale',
+        bodyType:'SUV Sport Utility',
+        engine:'L4 1.6 Turbo 187HP',
+        driveType:'FWD',
+        gasMileage:'16 KM/L',
+        plateNo:'B7*** Code 2',
+        condition:'Almost Brand New',
+        origin:'Korea Standard',
+        contact:'0912 387 513',
+        telegramNote:'ተጨማሪ የመኪናውን ፎቶ እንዲሁም ዋጋ የሚቀንሱ መኪናዎችን ለማየት የቴሌግራም ቻናላችንን ይቀላቀሉን',
+        telegramLink:'https://t.me/joinchat/AAAAAEhK0YVSL_hizSLjoA',
+        features:[
+          'ABS – Anti-Lock Brake System',
+          'Airbags – Front, Side, Curtain & Centre',
+          'Electronic Stability Control (ESC)',
+          'Lane Keep Assist (LKA)',
+          'Rear Cross Traffic Collision Avoidance',
+          'Electric Parking Brake with Auto Hold',
+          'DBC – Downhill Brake Control',
+          'Auto Windscreen Wipers with Rain Sensor',
+          'Bluetooth Connectivity',
+          'Parking Sensors – Front & Rear',
+          'Blind Spot Collision Avoidance Assist',
+          'Auto-Dimming Rearview Mirror',
+          'Premium Synthetic Seats'
+        ],
+        desc:'Almost brand new 2022 Hyundai Tucson Europe Standard — Korea-spec with full safety suite. 1.6 Turbo 187HP engine, 8-speed automatic, FWD. 40,000 km on the clock, immaculate condition. Full features including Lane Keep Assist, BSA, ESC, and premium synthetic leather seats. Plate B7*** Code 2. Price negotiable. Contact: 0912 387 513.'
+      },
+      {
+        id:1, make:'Toyota', model:'Vitz RS', year:2020,
+        img:'https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=700&q=80',
+        category:'sale', price:2800000, priceLabel:'2.8M ETB',
+        transmission:'Automatic', fuel:'Petrol', mileage:'28,000 km',
+        desc:'Well-maintained Toyota Vitz RS sourced from a single owner. Full service history available. Reverse camera, climate control A/C, and alloy wheels. Clean documents, ready for transfer.'
+      },
+      {
+        id:2, make:'Suzuki', model:'Dzire', year:2021,
+        img:'https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=700&q=80',
+        category:'sale', price:1950000, priceLabel:'1.95M ETB',
+        transmission:'Automatic', fuel:'Petrol', mileage:'18,500 km',
+        desc:'Fuel-efficient Suzuki Dzire in excellent condition. 23 km/L fuel economy, dual airbags, ABS, Bluetooth infotainment, and rear parking sensors. Ideal for Addis daily commute.'
+      },
+      {
+        id:3, make:'Toyota', model:'Yaris', year:2022,
+        img:'https://images.unsplash.com/photo-1590362891991-f776e747a588?w=700&q=80',
+        category:'sale', price:3100000, priceLabel:'3.1M ETB',
+        transmission:'CVT', fuel:'Petrol', mileage:'12,000 km',
+        desc:'Nearly-new Toyota Yaris with low mileage. Comes with Toyota Safety Sense, lane departure alert, Apple CarPlay, and full climate control. A premium compact sedan at a great price.'
+      },
+      {
+        id:4, make:'Toyota', model:'Corolla', year:2019,
+        img:'https://images.unsplash.com/photo-1502877338535-766e1452684a?w=700&q=80',
+        category:'sale', price:4200000, priceLabel:'4.2M ETB',
+        transmission:'Automatic', fuel:'Petrol', mileage:'45,000 km',
+        desc:'Toyota Corolla with full service history and single owner. Pre-collision system, reverse camera, Apple CarPlay / Android Auto. Locally registered with clear title. Immaculate interior.'
+      },
+      {
+        id:5, make:'Hyundai', model:'Accent', year:2020,
+        img:'https://images.unsplash.com/photo-1616788494672-ec7ca25fdda9?w=700&q=80',
+        category:'sale', price:2400000, priceLabel:'2.4M ETB',
+        transmission:'Automatic', fuel:'Petrol', mileage:'32,000 km',
+        desc:'Hyundai Accent in excellent shape. 6-speed automatic, rear camera, Bluetooth audio, heated front seats, and ABS/EBD. Clear title with all customs documents. Great value commuter.'
+      },
+      {
+        id:6, make:'Kia', model:'Rio', year:2021,
+        img:'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=700&q=80',
+        category:'sale', price:2650000, priceLabel:'2.65M ETB',
+        transmission:'Automatic', fuel:'Petrol', mileage:'22,000 km',
+        desc:'Kia Rio compact hatchback with sporty styling and modern features. 8" touchscreen, Apple CarPlay, lane keeping assist, and forward collision avoidance. Economical and reliable.'
+      },
+      {
+        id:7, make:'Toyota', model:'Vitz', year:2019,
+        img:'https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=700&q=80',
+        category:'rent', price:1800, priceLabel:'1,800 ETB / day',
+        transmission:'Automatic', fuel:'Petrol', mileage:'Fleet Managed',
+        desc:'Premium daily rental Toyota Vitz — clean, fully insured, and maintained to fleet standards. Includes GPS, Bluetooth audio. Minimum 2-day rental. Driver available on request.'
+      },
+      {
+        id:8, make:'Toyota', model:'Corolla', year:2020,
+        img:'https://images.unsplash.com/photo-1502877338535-766e1452684a?w=700&q=80',
+        category:'rent', price:2500, priceLabel:'2,500 ETB / day',
+        transmission:'Automatic', fuel:'Petrol', mileage:'Fleet Managed',
+        desc:'Executive rental Toyota Corolla for business or VIP events. Full A/C, spacious cabin, and professional presentation. Fully insured. Available with professional driver.'
+      },
+      {
+        id:9, make:'Hyundai', model:'Tucson', year:2021,
+        img:'https://images.unsplash.com/photo-1616788494672-ec7ca25fdda9?w=700&q=80',
+        category:'rent', price:3500, priceLabel:'3,500 ETB / day',
+        transmission:'Automatic', fuel:'Petrol', mileage:'Fleet Managed',
+        desc:'Spacious Hyundai Tucson SUV rental — perfect for family trips, airport transfers, or project site visits. AWD option, panoramic sunroof, and full climate control. Book via Telegram.'
+      },
+    ];
+
+    let activeCat = 'all';
+
+    /* ── FILTER ── */
+    function invFilter(){
+      const q    = (document.getElementById('inv-search').value || '').toLowerCase().trim();
+      const sort = document.getElementById('inv-sort').value;
+
+      let list = CARS.filter(c => {
+        const matchQ   = !q || (c.make + ' ' + c.model).toLowerCase().includes(q);
+        const matchCat = activeCat === 'all' || c.category === activeCat;
+        return matchQ && matchCat;
+      });
+
+      if (sort === 'asc')  list.sort((a,b) => a.price - b.price);
+      if (sort === 'desc') list.sort((a,b) => b.price - a.price);
+
+      updateCount(list.length);
+      renderGrid(list);
+
+      const isDirty = activeCat !== 'all' || q || sort !== 'default';
+      const resetBtn = document.getElementById('inv-reset');
+      if (resetBtn) resetBtn.style.display = isDirty ? 'inline-block' : 'none';
+    }
+
+    /* ── COUNT BADGE ── */
+    function updateCount(n) {
+      const numEl = document.getElementById('inv-count-num');
+      const lblEl = document.getElementById('inv-count-label');
+      if (!numEl) return;
+      numEl.textContent = n;
+      lblEl.textContent = ' vehicle' + (n !== 1 ? 's' : '') + ' found';
+      numEl.classList.remove('inv-count-pop');
+      void numEl.offsetWidth;
+      numEl.classList.add('inv-count-pop');
+    }
+
+    /* ── RENDER ── */
+    function renderGrid(list){
+      const grid  = document.getElementById('inv-grid');
+      const empty = document.getElementById('inv-empty');
+
+      if (!list.length) {
+        grid.innerHTML = '';
+        empty.style.display = 'block';
+        return;
+      }
+      empty.style.display = 'none';
+
+      grid.innerHTML = list.map((c, i) => `
+        <article class="inv-card inv-card-anim" style="animation-delay:${i * 0.055}s;"
+          onclick="invOpenModal(${c.id})"
+          tabindex="0" role="button"
+          aria-label="${c.year} ${c.make} ${c.model}">
+
+          <!-- Image -->
+          <div class="inv-card-img-wrap">
+            <img class="inv-card-img"
+              src="${c.img}" alt="${c.make} ${c.model}"
+              loading="lazy"
+              onerror="this.src='https://images.unsplash.com/photo-1502877338535-766e1452684a?w=700&q=80'">
+            <span style="position:absolute;top:10px;left:10px;z-index:2;"
+              class="${c.category==='sale'?'inv-badge-sale':'inv-badge-rent'}">
+              ${c.category==='sale'?'For Sale':'For Rent'}
+            </span>
+            ${c.urgent ? `<span style="position:absolute;bottom:10px;left:10px;z-index:2;background:#ef4444;color:#fff;font-size:0.48rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;padding:4px 10px;border-radius:20px;display:flex;align-items:center;gap:5px;"><span style='animation:tgLivePulse 1.4s ease-in-out infinite;width:5px;height:5px;border-radius:50%;background:#fff;display:inline-block;'></span>URGENT SALE</span>` : ''}
+            <span style="position:absolute;top:10px;right:10px;z-index:2;
+              background:rgba(0,0,0,0.55);backdrop-filter:blur(6px);
+              color:rgba(255,255,255,0.9);font-size:0.5rem;letter-spacing:0.1em;
+              padding:3px 9px;border-radius:20px;font-family:var(--sans);font-weight:700;">
+              ${c.year}
+            </span>
+          </div>
+
+          <!-- Body -->
+          <div class="inv-card-body">
+            <div>
+              <div class="inv-card-title">${c.make} ${c.model}</div>
+              <div class="inv-card-meta">${c.year} &middot; ${c.category==='sale'?'For Sale':'For Rent'}</div>
+            </div>
+
+            <div class="inv-spec-row">
+              <span class="inv-spec-chip"><i class="fa-solid fa-gears"></i>${c.transmission}</span>
+              <span class="inv-spec-chip"><i class="fa-solid fa-gas-pump"></i>${c.fuel}</span>
+              <span class="inv-spec-chip"><i class="fa-solid fa-gauge-high"></i>${c.mileage}</span>
+            </div>
+
+            <div class="inv-price-row">
+              <div>
+                <div class="inv-price-label">${c.category==='sale'?'Asking Price':'Daily Rate'}</div>
+                <div class="inv-price">${c.priceLabel}</div>
+              </div>
+              <div class="inv-arrow-btn" aria-hidden="true">
+                <i class="fa-solid fa-arrow-right" style="font-size:0.65rem;"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <button class="inv-cta" onclick="event.stopPropagation();invOpenModal(${c.id})">
+            View Details &nbsp;<i class="fa-solid fa-arrow-right" style="font-size:0.7rem;"></i>
+          </button>
+        </article>
+      `).join('');
+
+      /* keyboard a11y */
+      grid.querySelectorAll('.inv-card').forEach(card => {
+        card.addEventListener('keydown', e => {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); }
+        });
+      });
+    }
+
+    /* ── CATEGORY PILL ── */
+    window.invSetCat = function(btn, cat) {
+      activeCat = cat;
+      document.querySelectorAll('.inv-pill').forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+      invFilter();
+    };
+
+    /* ── RESET ── */
+    window.invReset = function() {
+      activeCat = 'all';
+      document.getElementById('inv-search').value = '';
+      document.getElementById('inv-sort').value   = 'default';
+      document.querySelectorAll('.inv-pill').forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      const allPill = document.querySelector('.inv-pill[data-cat="all"]');
+      if (allPill) { allPill.classList.add('active'); allPill.setAttribute('aria-selected','true'); }
+      const resetBtn = document.getElementById('inv-reset');
+      if (resetBtn) resetBtn.style.display = 'none';
+      invFilter();
+    };
+
+    window.invFilter = invFilter;
+
+    /* ── MODAL OPEN ── */
+    window.invOpenModal = function(id){
+      const c = CARS.find(x => x.id === id);
+      if (!c) return;
+
+      /* ── Gallery / single image ── */
+      window._gall = [];
+      window._gallIdx = 0;
+
+      const gPrev    = document.getElementById('invGallPrev');
+      const gNext    = document.getElementById('invGallNext');
+      const gCounter = document.getElementById('invGallCounter');
+      const gCaption = document.getElementById('invGallCaption');
+      const gThumbs  = document.getElementById('invGallThumbs');
+      const gImg     = document.getElementById('invModalImg');
+
+      if (c.gallery && c.gallery.length > 1) {
+        window._gall = c.gallery;
+        window._gallIdx = 0;
+
+        // Main image
+        gImg.src = c.gallery[0].src;
+        gImg.alt = c.gallery[0].alt || (c.make + ' ' + c.model);
+        gImg.style.height = '300px';
+
+        // Arrows
+        gPrev.style.display = 'flex';
+        gNext.style.display = 'flex';
+
+        // Counter
+        gCounter.style.display = 'block';
+        gCounter.textContent   = '1 / ' + c.gallery.length;
+
+        // Caption
+        gCaption.style.display = 'block';
+        gCaption.textContent   = c.gallery[0].alt || '';
+
+        // Thumbnails
+        gThumbs.style.display = 'flex';
+        gThumbs.innerHTML = c.gallery.map((g, i) => `
+          <img src="${g.src}" alt="${g.alt||''}"
+            data-gi="${i}"
+            onclick="invGallGoto(${i})"
+            style="height:46px;width:70px;object-fit:cover;border-radius:5px;
+                   cursor:pointer;flex-shrink:0;transition:outline 0.15s,opacity 0.15s;
+                   ${i===0?'outline:2px solid var(--gold);opacity:1;':'outline:2px solid transparent;opacity:0.55;'}">`
+        ).join('');
+
+      } else {
+        // No gallery — single image
+        gImg.src = c.img;
+        gImg.alt = c.make + ' ' + c.model;
+        gImg.style.height = '260px';
+        gPrev.style.display    = 'none';
+        gNext.style.display    = 'none';
+        gCounter.style.display = 'none';
+        gCaption.style.display = 'none';
+        gThumbs.style.display  = 'none';
+        gThumbs.innerHTML      = '';
+      }
+
+      /* Badges row */
+      let badges = `<span class="${c.category==='sale'?'inv-badge-sale':'inv-badge-rent'}" style="margin-right:6px;">${c.category==='sale'?'For Sale':'For Rent'}</span>`;
+      if (c.urgent) badges += `<span style="background:#ef4444;color:#fff;font-size:0.5rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:4px 10px;border-radius:20px;margin-right:6px;">&#x203C; Urgent</span>`;
+      if (c.origin) badges += `<span style="background:rgba(201,162,39,0.12);color:var(--gold);border:1px solid rgba(201,162,39,0.3);font-size:0.5rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:4px 10px;border-radius:20px;">${c.origin}</span>`;
+      document.getElementById('invModalBadge').innerHTML = badges;
+
+      /* Title / year */
+      document.getElementById('invModalTitle').textContent = c.make + ' ' + c.model;
+      document.getElementById('invModalYear').textContent  = c.year + ' · ' + (c.bodyType||'') + (c.bodyType?' · ':'') + (c.category==='sale'?'For Sale':'Available for Rent');
+
+      /* Price */
+      let priceHTML = `<span style="color:var(--gold);font-size:2rem;font-weight:800;font-family:var(--sans);">${c.priceLabel}</span>`;
+      if (c.category==='sale') priceHTML += `<span style="font-size:0.7rem;color:var(--text-muted);font-family:var(--sans);display:block;margin-top:4px;font-weight:500;">Negotiable · Contact ${c.contact||'0912 387 513'}</span>`;
+      document.getElementById('invModalPrice').innerHTML = priceHTML;
+
+      /* Specs grid — extra fields if present */
+      const specs = [
+        {l:'Transmission', v:c.transmission},
+        {l:'Fuel Type',    v:c.fuel},
+        {l:'Mileage',      v:c.mileage},
+      ];
+      if (c.engine)    specs.push({l:'Engine',    v:c.engine});
+      if (c.driveType) specs.push({l:'Drive',     v:c.driveType});
+      if (c.gasMileage)specs.push({l:'Economy',   v:c.gasMileage});
+      if (c.condition) specs.push({l:'Condition', v:c.condition});
+      if (c.plateNo)   specs.push({l:'Plate No.', v:c.plateNo});
+      document.getElementById('invModalSpecs').innerHTML = specs.map(s => `
+        <div style="background:var(--bg-card);padding:14px 18px;">
+          <div style="font-size:0.52rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-muted);font-family:var(--sans);margin-bottom:4px;">${s.l}</div>
+          <div style="font-size:0.82rem;font-weight:700;color:var(--text-primary);font-family:var(--sans);">${s.v}</div>
+        </div>
+      `).join('');
+
+      /* Description */
+      document.getElementById('invModalDesc').textContent = c.desc;
+
+      /* Features list */
+      const featWrap = document.getElementById('invModalFeatures');
+      if (featWrap) {
+        if (c.features && c.features.length) {
+          featWrap.style.display = 'block';
+          featWrap.innerHTML = `
+            <div style="font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);font-family:var(--sans);font-weight:700;margin-bottom:14px;">
+              <i class="fa-solid fa-shield-halved" style="margin-right:6px;"></i>Key Features &amp; Safety
+            </div>
+            <ul style="display:grid;grid-template-columns:repeat(2,1fr);gap:7px 16px;list-style:none;padding:0;margin:0;">
+              ${(c.features||[]).map(f=>`
+                <li style="font-size:0.76rem;color:var(--text-body);font-family:var(--sans);display:flex;align-items:flex-start;gap:8px;line-height:1.4;">
+                  <span style="width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:5px;"></span>${f}
+                </li>`).join('')}
+            </ul>`;
+        } else {
+          featWrap.style.display = 'none';
+        }
+      }
+
+      /* Amharic Telegram note */
+      const tgNote = document.getElementById('invModalTgNote');
+      if (tgNote) {
+        if (c.telegramNote && c.telegramLink) {
+          tgNote.style.display = 'flex';
+          tgNote.querySelector('#invModalTgText').textContent = c.telegramNote;
+          tgNote.querySelector('#invModalTgLink').href = c.telegramLink;
+        } else {
+          tgNote.style.display = 'none';
+        }
+      }
+
+      const overlay = document.getElementById('invModalOverlay');
+      overlay.style.display = 'flex';
+      overlay.style.opacity = '0';
+      requestAnimationFrame(() => { overlay.style.opacity = '1'; });
+      document.body.style.overflow = 'hidden';
+    };
+
+    /* ── MODAL CLOSE ── */
+    window.invCloseModal = function(e){
+      if (e.target === document.getElementById('invModalOverlay')) invCloseModalBtn();
+    };
+    window.invCloseModalBtn = function(){
+      const overlay = document.getElementById('invModalOverlay');
+      overlay.style.opacity = '0';
+      setTimeout(() => {
+        overlay.style.display = 'none';
+        overlay.style.opacity = '1';
+      }, 220);
+      document.body.style.overflow = '';
+    };
+
+    /* ── SWIPE DOWN TO CLOSE (mobile sheet) ── */
+    const modalEl = document.getElementById('invModal');
+    let _tsY = 0;
+    modalEl.addEventListener('touchstart', e => { _tsY = e.touches[0].clientY; }, { passive: true });
+    modalEl.addEventListener('touchmove',  e => {
+      if (e.touches[0].clientY - _tsY > 64) invCloseModalBtn();
+    }, { passive: true });
+
+    /* ── KEYBOARD ── */
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') invCloseModalBtn(); });
+
+    /* ── EXPOSE CARS to global search ── */
+    window.__GS_CARS__ = CARS;
+
+
+    /* ── Gallery navigation ── */
+    window.invGallGoto = function(idx) {
+      const g   = window._gall;
+      if (!g || !g.length) return;
+      idx = (idx + g.length) % g.length;
+      window._gallIdx = idx;
+      const gImg = document.getElementById('invModalImg');
+      gImg.style.opacity = '0';
+      setTimeout(() => {
+        gImg.src = g[idx].src;
+        gImg.alt = g[idx].alt || '';
+        gImg.style.opacity = '1';
+      }, 130);
+      document.getElementById('invGallCounter').textContent = (idx + 1) + ' / ' + g.length;
+      document.getElementById('invGallCaption').textContent = g[idx].alt || '';
+      // Update thumb highlights
+      document.querySelectorAll('#invGallThumbs img').forEach((el, i) => {
+        el.style.outline = i === idx ? '2px solid var(--gold)' : '2px solid transparent';
+        el.style.opacity  = i === idx ? '1' : '0.55';
+      });
+    };
+    window.invGallStep = function(dir) {
+      invGallGoto(window._gallIdx + dir);
+    };
+
+    /* ── INIT ── */
+    invFilter();
+  })();
+  
+
+/* --- SCRIPT BLOCK --- */
+
+
+/* ── Telegram iframe load handler ── */
+function tgIframeLoaded() {
+  const iframe   = document.getElementById('tg-iframe');
+  const skeleton = document.getElementById('tg-skeleton');
+  const fallback = document.getElementById('tg-fallback');
+
+  if (!iframe) return;
+
+  /* Fade out skeleton, fade in iframe */
+  if (skeleton) {
+    skeleton.style.transition = 'opacity 0.4s ease';
+    skeleton.style.opacity = '0';
+    setTimeout(() => { skeleton.style.display = 'none'; }, 420);
+  }
+
+  iframe.style.display = 'block';
+  iframe.style.opacity = '0';
+  iframe.style.transition = 'opacity 0.5s ease';
+  setTimeout(() => { iframe.style.opacity = '1'; }, 50);
+}
+
+/* ── Fallback: if iframe doesn't load in 6s, show card posts ── */
+setTimeout(function() {
+  const iframe   = document.getElementById('tg-iframe');
+  const skeleton = document.getElementById('tg-skeleton');
+  const fallback = document.getElementById('tg-fallback');
+  if (!iframe || iframe.style.display === 'block') return;
+
+  /* iframe blocked or slow — show fallback cards */
+  if (skeleton) skeleton.style.display = 'none';
+  if (iframe)   iframe.style.display   = 'none';
+  if (fallback) {
+    fallback.style.display = 'flex';
+    /* stagger-in each post */
+    fallback.querySelectorAll('.tg-post').forEach((p, i) => {
+      p.style.opacity = '0';
+      p.style.transform = 'translateY(14px)';
+      p.style.transition = `opacity 0.4s ease ${i * 0.09}s, transform 0.4s ease ${i * 0.09}s`;
+      requestAnimationFrame(() => {
+        p.style.opacity = '1';
+        p.style.transform = 'translateY(0)';
+      });
+    });
+  }
+}, 6000);
+
+
+/* --- SCRIPT BLOCK --- */
+
+
+
+/* ═══════════════════════════════════════════
+   THEME SYSTEM — Light (default) / Dark
+═══════════════════════════════════════════ */
+(function() {
+  // Light is now default (marketplace style). Dark adds .light class.
+  var saved = localStorage.getItem('beki-theme');
+  var isDark = saved === 'dark';
+  if (isDark) document.documentElement.classList.add('light');
+})();
+
+function toggleTheme() {
+  var isDark = document.documentElement.classList.contains('light');
+  if (isDark) {
+    document.documentElement.classList.remove('light');
+    localStorage.setItem('beki-theme', 'light');
+  } else {
+    document.documentElement.classList.add('light');
+    localStorage.setItem('beki-theme', 'dark');
+  }
+  syncSelectOptions();
+}
+
+function syncSelectOptions() {
+  var isDark = document.documentElement.classList.contains('light');
+  var bg = isDark ? '#1C2333' : '#FFFFFF';
+  var clr = isDark ? '#F0F4FF' : '#1A2033';
+  var opts = document.querySelectorAll('#langDropdown option');
+  if (opts.length) {
+    opts.forEach(function(o) { o.style.background = bg; o.style.color = clr; });
+  }
+}
+
+/* ─── TICKER ─── */
+const tickerContent = ['🇪🇹 Ethiopia\'s Premier Luxury Car Brokerage', '🚗 New Japan Imports Arriving Weekly', '🇦🇪 UAE & Dubai Sourcing Available', '⭐ Transparent Commission · Zero Hidden Fees', '📲 Follow @bekiautocar on Telegram for Live Arrivals', '🔑 VIP Rentals · Executive Sedans & SUVs'];
+const ticker = document.getElementById('ticker');
+const full = [...tickerContent, ...tickerContent].map(t => `<span class="ticker-item">${t}</span>`).join('<span class="ticker-dot"></span>');
+ticker.innerHTML = full;
+
+/* ─── HERO SLIDESHOW — interactive, touch-friendly ─── */
+const slides = document.querySelectorAll('.hero-slide');
+const dots   = document.querySelectorAll('.hi-dot');
+let cur = 0, slideTimer, isTransitioning = false;
+
+function goToSlide(n) {
+  if (isTransitioning || n === cur) return;
+  isTransitioning = true;
+  slides[cur].classList.remove('active');
+  dots[cur].classList.remove('active');
+  cur = (n + slides.length) % slides.length;
+  slides[cur].classList.add('active');
+  dots[cur].classList.add('active');
+  /* allow next transition after crossfade completes */
+  setTimeout(() => { isTransitioning = false; }, 1700);
+}
+
+function nextSlide() { goToSlide(cur + 1); }
+function prevSlide() { goToSlide(cur - 1); }
+
+function startTimer() {
+  clearInterval(slideTimer);
+  slideTimer = setInterval(nextSlide, 6000);
+}
+startTimer();
+
+/* Arrow buttons */
+// Arrow buttons removed
+
+/* Dot clicks reset timer */
+dots.forEach((dot, i) => {
+  dot.addEventListener('click', () => { goToSlide(i); startTimer(); });
+});
+
+/* Touch / swipe support */
+const slideshow = document.getElementById('heroSlideshow');
+let touchStartX = 0, touchStartY = 0;
+slideshow.addEventListener('touchstart', e => {
+  touchStartX = e.touches[0].clientX;
+  touchStartY = e.touches[0].clientY;
+}, { passive: true });
+slideshow.addEventListener('touchend', e => {
+  const dx = e.changedTouches[0].clientX - touchStartX;
+  const dy = e.changedTouches[0].clientY - touchStartY;
+  /* only trigger if horizontal swipe > 40px and not a scroll */
+  if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+    dx < 0 ? nextSlide() : prevSlide();
+    startTimer();
+  }
+}, { passive: true });
+
+/* Pause autoplay while user hovers (desktop) */
+slideshow.addEventListener('mouseenter', () => clearInterval(slideTimer));
+slideshow.addEventListener('mouseleave', startTimer);
+
+/* Pause when tab is hidden to save battery */
+document.addEventListener('visibilitychange', () => {
+  document.hidden ? clearInterval(slideTimer) : startTimer();
+});
+
+/* ─── HEADER SCROLL ─── */
+const header = document.getElementById('site-header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 20);
+  document.getElementById('scrollTopBtn').classList.toggle('show', window.scrollY > 500);
+}, { passive: true });
+
+document.getElementById('scrollTopBtn').addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+/* ─── REVEAL ON SCROLL ─── */
+const revealEls = document.querySelectorAll('.reveal');
+const revObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+revealEls.forEach(el => revObs.observe(el));
+
+/* ─── MOBILE MENU ─── */
+let mobOpen = false;
+function toggleMobMenu() { mobOpen ? closeMobMenu() : openMobMenu(); }
+function openMobMenu() {
+  mobOpen = true;
+  document.getElementById('mob-nav').classList.add('open');
+  const ov = document.getElementById('mob-nav-overlay');
+  if (ov) { ov.style.display = 'block'; requestAnimationFrame(() => ov.classList.add('open')); }
+  document.getElementById('mob-icon-menu').style.display = 'none';
+  document.getElementById('mob-icon-close').style.display = '';
+  document.getElementById('mob-menu-btn').setAttribute('aria-expanded', 'true');
+}
+function closeMobMenu() {
+  mobOpen = false;
+  document.getElementById('mob-nav').classList.remove('open');
+  const ov = document.getElementById('mob-nav-overlay');
+  if (ov) { ov.classList.remove('open'); setTimeout(() => { if (!mobOpen) ov.style.display = ''; }, 300); }
+  document.getElementById('mob-icon-menu').style.display = '';
+  document.getElementById('mob-icon-close').style.display = 'none';
+  document.getElementById('mob-menu-btn').setAttribute('aria-expanded', 'false');
+}
+document.addEventListener('click', e => {
+  if (mobOpen && !document.getElementById('mob-nav').contains(e.target) && !document.getElementById('mob-menu-btn').contains(e.target)) closeMobMenu();
+});
+
+/* ─── DESTINATION TABS ─── */
+function switchDest(btn, key) {
+  document.querySelectorAll('.dest-tab-btn').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.cars-panel').forEach(p => { p.classList.remove('active'); p.style.display = ''; });
+  btn.classList.add('active');
+  const panel = document.getElementById('panel-' + key);
+  if (panel) {
+    panel.classList.add('active');
+  }
+  updateCarouselArrows();
+}
+
+/* ─── CAROUSEL SCROLL ─── */
+function getActivePanel() {
+  return document.querySelector('.cars-panel.active');
+}
+function scrollCarousel(dir) {
+  const panel = getActivePanel();
+  if (!panel) return;
+  const cardW = panel.querySelector('.car-card') ? panel.querySelector('.car-card').offsetWidth + 1 : 302;
+  panel.scrollBy({ left: dir * cardW * 2, behavior: 'smooth' });
+  setTimeout(updateCarouselArrows, 350);
+}
+function updateCarouselArrows() {
+  const panel = getActivePanel();
+  const prev = document.getElementById('carouselPrev');
+  const next = document.getElementById('carouselNext');
+  if (!panel || !prev || !next) return;
+  prev.classList.toggle('hidden', panel.scrollLeft <= 4);
+  next.classList.toggle('hidden', panel.scrollLeft + panel.clientWidth >= panel.scrollWidth - 4);
+}
+document.addEventListener('DOMContentLoaded', () => {
+  const panel = getActivePanel();
+  if (panel) {
+    panel.addEventListener('scroll', updateCarouselArrows, { passive: true });
+    updateCarouselArrows();
+  }
+});
+// Re-attach scroll listener after tab switch
+const origSwitchDest = switchDest;
+
+/* ─── CAR DETAIL MODAL ─── */
+function openCarDetail(car) {
+  const overlay = document.getElementById('carDetailOverlay');
+  const img = document.getElementById('cdmHeroImg');
+  const placeholder = document.getElementById('cdmHeroPlaceholder');
+
+  // Hero image
+  img.src = car.img || '';
+  img.alt = car.name;
+  img.style.display = 'block';
+  placeholder.style.display = 'none';
+
+  // Badges
+  const bWrap = document.getElementById('cdmBadges');
+  bWrap.innerHTML = '';
+  if (car.badge) bWrap.innerHTML += `<span class="cdm-badge cdm-badge-red">${car.badge}</span>`;
+  if (car.origin) bWrap.innerHTML += `<span class="cdm-badge cdm-badge-navy">${car.origin}</span>`;
+  const statusLabel = car.status === 'reserved' ? 'Reserved' : 'Available';
+  const statusClass = car.status === 'reserved' ? 'cdm-badge-navy' : 'cdm-badge-green';
+  bWrap.innerHTML += `<span class="cdm-badge ${statusClass}">${statusLabel}</span>`;
+
+  // Title / subtitle / price
+  document.getElementById('cdmTitle').textContent = car.name;
+  document.getElementById('cdmSubtitle').textContent = car.subtitle || '';
+  document.getElementById('cdmPrice').textContent = car.price;
+
+  // Status dot
+  const statusEl = document.getElementById('cdmStatus');
+  statusEl.innerHTML = car.status === 'reserved'
+    ? `<span class="status-dot" style="background:#fbbf24;display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px;"></span> Reserved`
+    : `<span class="status-dot" style="background:#4ade80;display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px;animation:goldPulse 2s infinite;"></span> Available`;
+
+  // Specs grid
+  const specsEl = document.getElementById('cdmSpecs');
+  specsEl.innerHTML = (car.specs || []).map(s =>
+    `<div class="cdm-spec-item"><span class="cdm-spec-label">${s.l}</span><span class="cdm-spec-value">${s.v}</span></div>`
+  ).join('');
+
+  // Features
+  const featEl = document.getElementById('cdmFeatures');
+  featEl.innerHTML = (car.features || []).map(f => `<li>${f}</li>`).join('');
+
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeCarDetail(e) {
+  if (e && e.target !== document.getElementById('carDetailOverlay')) return;
+  closeCarDetailBtn();
+}
+function closeCarDetailBtn() {
+  document.getElementById('carDetailOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeCarDetailBtn();
+});
+
+/* ─── MODAL ─── */
+function closeModal() { document.getElementById('successOverlay').classList.remove('open'); }
+document.getElementById('successOverlay').addEventListener('click', e => { if (e.target === e.currentTarget) closeModal(); });
+
+/* ─── FORM SUBMIT ─── */
+function handleInquirySubmit(e) {
+  e.preventDefault();
+  const lang = currentLang || 'en';
+  const d = translations[lang] || translations.en;
+  const name    = document.getElementById('inputName').value.trim();
+  const phone   = document.getElementById('inputPhone').value.trim();
+  const vehicle = document.getElementById('inputVehicle').value.trim();
+  const msg     = document.getElementById('txtMessage').value.trim();
+
+  const btn = document.getElementById('btnSubmit');
+  btn.classList.add('submitting');
+  document.getElementById('btnIcon').className = 'fa-solid fa-circle-notch fa-spin';
+  document.getElementById('btnText').innerText = d.sending || 'Sending…';
+
+  const subject = encodeURIComponent(`[Beki AutoCar Inquiry] ${vehicle} — ${name}`);
+  const body = encodeURIComponent(`BEKI AUTOCAR — NEW CUSTOMER INQUIRY\n\nName    : ${name}\nPhone   : ${phone}\nVehicle : ${vehicle}\n\nMessage:\n${msg}\n\nSent via bekiautocar.com`);
+  window.location.href = `mailto:bereketbeshir8@gmail.com?subject=${subject}&body=${body}`;
+
+  setTimeout(() => {
+    document.getElementById('modalTag').innerText = d.modalTag || 'Inquiry Received';
+    document.getElementById('modalHeading').innerText = d.modalHeading || 'Thank You';
+    document.getElementById('modalBody').innerText = d.modalBody ? d.modalBody(name) : `Your inquiry has been sent. We'll reach out shortly.`;
+    document.getElementById('modalCustomer').innerHTML = `<i class="fa-solid fa-user-check" style="margin-right:6px;"></i>${name}`;
+    document.getElementById('successOverlay').classList.add('open');
+    document.getElementById('inquiryForm').reset();
+    btn.classList.remove('submitting');
+    document.getElementById('btnIcon').className = 'fa-solid fa-paper-plane';
+    document.getElementById('btnText').innerText = d.btnSubmit || 'Submit Inquiry';
+  }, 700);
+}
+
+/* ─── TRANSLATIONS ─── */
+const translations = {
+  en: {
+    navHome:'Home', navServices:'Services', navCars:'Cars', navUpdates:'Updates', navShowroom:'Showroom', navInquire:'Inquire',
+    heroBadge:'Elite Brokerage Experience',
+    heroH1:'Looking to buy or sell?<br><em>We save your precious time.</em>',
+    heroSub:'Sourcing pristine zero-mile luxury imports, certified pre-owned options, and executive rentals across Ethiopia with unmatched legal safety and market discretion.',
+    heroBtnTg:'View Telegram Channel', heroBtnDm:'Direct Message', heroBtnCall:'Call Now',
+    founderBadge:'Premium Car Brokerage · Ethiopia', founderTitle:'Founder, Owner & Manager',
+    founderBio:'Leading BEKI AUTOCAR to deliver the most reliable, transparent, and trusted automotive marketplace experience in Addis Ababa and throughout Ethiopia.',
+    showroomSub:'Our Location', showroomH2:'Visit Our Showroom',
+    showroomP:'Looking for a face-to-face consultation? Verify a vehicle logbook or discuss a premium inquiry at our office.',
+    showroomHrsH:'Working Hours', showroomHrsP:'Monday – Saturday: 8:00 – 7:00', showroomTelH:'Direct Line',
+    servicesBadge:'Our Expertise', servicesH2:'Premium Services', servicesP:'Complete automotive solutions for the premium Ethiopian market.',
+    mainHeading:'Get in Touch with Us', subHeading:'Have questions about a vehicle? Reach out directly.',
+    formTitle:'Send a Direct Inquiry', lblName:'Full Name', lblPhone:'Phone Number', lblVehicle:'Vehicle of Interest', lblMsg:'Your Message',
+    btnSubmit:'Submit Inquiry', phName:'Your name', phPhone:'+251...', phVehicle:'e.g., Toyota Vitz', phMsg:'Describe the vehicle, budget, or requirements...',
+    modalTag:'Inquiry Received', modalHeading:'Thank You',
+    modalBody: n => `Your inquiry has been sent to Beki AutoCar. We'll reach out to you shortly — we value every minute of your time.`,
+    sending:'Sending…'
+  },
+  am: {
+    navHome:'መነሻ', navServices:'አገልግሎቶቻችን', navCars:'መኪናዎች', navUpdates:'ዝማኔዎች', navShowroom:'ትዕይንት ቦታ', navInquire:'ጥያቄ ላክ',
+    heroBadge:'ልዩ የሞባይል ደላሎ ልምድ',
+    heroH1:'መግዛት ወይም መሸጥ ይፈልጋሉ?<br><em>የእርስዎን ጊዜ እናድናለን።</em>',
+    heroSub:'ከጃፓን፣ ዱባይ እና አውሮፓ ምርጥ ዜሮ ኪሎሜትር ቅብጠ መኪናዎችን እናቀርባለን — ሕጋዊና ደህንነቱ የተጠበቀ ሂደት።',
+    heroBtnTg:'ቴሌግራም ቻናል ክፈት', heroBtnDm:'ቀጥታ ሜሴጅ ላክ', heroBtnCall:'አሁን ደውል',
+    founderBadge:'ፕሪሚየም የመኪና ደላሎ · ኢትዮጵያ', founderTitle:'መስራች፣ ባለቤት እና ሥራ አስኪያጅ',
+    founderBio:'ቤኪ ኦቶካርን ለኢትዮጵያ በጣም አስተማማኝ፣ ግልጽ እና ታማኝ የሆነ የመኪና ማርኬት ልምድ ለማቅረብ እየመሩ ነው።',
+    showroomSub:'አካባቢያችን', showroomH2:'ትዕይንት ቦታችንን ጎብኙ',
+    showroomP:'ፊት ለፊት ምክር ፈልጋለህ? ሰነዱን ለማረጋገጥ ወይም ፕሪሚየም ጥያቄ ለመወያየት ወደ ቢሯችን ኑ።',
+    showroomHrsH:'የሥራ ሰዓት', showroomHrsP:'ሰኞ – ቅዳሜ: 8:00 – 7:00', showroomTelH:'ቀጥታ ስልክ',
+    servicesBadge:'ልምዳችን', servicesH2:'ፕሪሚየም አገልግሎቶቻችን', servicesP:'ለኢትዮጵያ ፕሪሚየም ገበያ ሙሉ የመኪና መፍትሔ።',
+    mainHeading:'ያግኙን', subHeading:'ስለ መኪና ጥያቄ አለዎት? በቀጥታ ያግኙን።',
+    formTitle:'ቀጥታ ጥያቄ ላክ', lblName:'ሙሉ ስም', lblPhone:'ስልክ ቁጥር', lblVehicle:'ፍላጎትዎ ያለው መኪና', lblMsg:'መልዕክትዎ',
+    btnSubmit:'ጥያቄ ላክ', phName:'ፍ.ም. አበበ ተሰፋዬ', phPhone:'+251...', phVehicle:'ለምሳሌ፡ ቶዮታ ቪትዝ', phMsg:'የጥያቄዎን ዝርዝር እዚህ ይጻፉ...',
+    modalTag:'ጥያቄ ተቀብለናል', modalHeading:'እናመሰግናለን!',
+    modalBody: n => `ውድ ${n}፣ ጥያቄዎ ወደ ቤኪ ኦቶካር ተልኳል። ቡድናችን በቅርቡ ያነጋግርዎታል።`,
+    sending:'በመላክ ላይ…'
+  },
+  om: {
+    navHome:'Mana', navServices:'Tajaajila', navCars:'Konkolaataa', navUpdates:'Haaromsa', navShowroom:'Bakka Agarsiisa', navInquire:'Gaafadhu',
+    heroBadge:'Tajaajiila Daldala Konkolaataa Olaanaa',
+    heroH1:'Bituu ykn gurguruu barbaaddaa?<br><em>Yeroo kee ni qusanna.</em>',
+    heroSub:'Konkolaataa haaraa ykn fayyadamaa Itoophiyaa keessatti tajaajila seeraa fi amanamaa waliin dhiyeessina.',
+    heroBtnTg:'Chaanali Telegiram Ilaali', heroBtnDm:'Kallattiin Quunnamii', heroBtnCall:'Amma Bilbili',
+    founderBadge:'Daldala Konkolaataa Premium · Itoophiyaa', founderTitle:'Hundeessaa, Abbaa fi Bulchitoota',
+    founderBio:'BEKI AUTOCAR gara Addis Ababaatti fi Itoophiyaa guutuu keessatti gabaa konkolaataa amansiisaa dhiyeessuuf hogganuuf.',
+    showroomSub:'Argama Dhaabbata', showroomH2:'Bakka Agarsiisa Keenya Daawwadhu',
+    showroomP:'Marii fuula-itti-fuul barbaaddaa? Ofiisii keenyatti kootii.',
+    showroomHrsH:'Sa\'aatii Hojii', showroomHrsP:'Wiixata – Sanbata: 8:00 – 7:00', showroomTelH:'Sarara Kallattii',
+    servicesBadge:'Muuxannoo Keenya', servicesH2:'Tajaajila Premium', servicesP:'Furmaata konkolaataa guutuu gabaa premium Itoophiyaatiif.',
+    mainHeading:'Nu Quunnamaa', subHeading:'Waa\'ee konkolaataa gaaffii qabduu? Nu quunnamaa.',
+    formTitle:'Gaaffii Kallattiin Ergi', lblName:'Maqaa Guutuu', lblPhone:'Lakkofsa Bilbilaa', lblVehicle:'Konkolaataa Barbaaddan', lblMsg:'Ergaa Keessan',
+    btnSubmit:'Gaaffii Ergi', phName:'Fkn. Chaltu Abebe', phPhone:'+251...', phVehicle:'Fkn. Toyota Vitz', phMsg:'Bal\'ina gaaffii keessanii asitti barreessaa...',
+    modalTag:'Gaaffiin Nuu Geehe', modalHeading:'Galatoomi!',
+    modalBody: n => `Kabajamaa ${n}, gaaffiin keessan gara Beki AutoCar ergameera.`,
+    sending:'Erganamaa jira…'
+  }
+};
+
+function changeLanguage(lang) {
+  const d = translations[lang] || translations.en;
+  const s = (id, v) => { const el = document.getElementById(id); if (el && v != null) el.innerText = v; };
+  const h = (id, v) => { const el = document.getElementById(id); if (el && v) el.innerHTML = v; };
+  const p = (id, v) => { const el = document.getElementById(id); if (el && v) el.placeholder = v; };
+
+  s('nav-home', d.navHome); s('nav-services', d.navServices); s('nav-cars', d.navCars);
+  s('nav-updates', d.navUpdates); s('nav-showroom', d.navShowroom); s('nav-inquire', d.navInquire);
+  s('mob-nav-home', d.navHome); s('mob-nav-services', d.navServices); s('mob-nav-cars', d.navCars);
+  s('mob-nav-updates', d.navUpdates); s('mob-nav-showroom', d.navShowroom); s('mob-nav-inquire', d.navInquire);
+  s('hero-badge', d.heroBadge);
+  h('hero-h1', d.heroH1);
+  s('hero-sub', d.heroSub);
+  s('hero-btn-tg', d.heroBtnTg); s('hero-btn-dm', d.heroBtnDm); s('hero-btn-call', d.heroBtnCall);
+  s('founderBadge', d.founderBadge); s('founderTitle', d.founderTitle); s('founderBio', d.founderBio);
+  s('showroom-sub', d.showroomSub); s('showroom-h2', d.showroomH2); s('showroom-p', d.showroomP);
+  s('showroom-hrs-h', d.showroomHrsH); s('showroom-hrs-p', d.showroomHrsP); s('showroom-tel-h', d.showroomTelH);
+  s('services-badge', d.servicesBadge); s('services-h2', d.servicesH2); s('services-p', d.servicesP);
+  s('mainHeading', d.mainHeading); s('subHeading', d.subHeading);
+  h('formTitle', `<i class="fa-regular fa-paper-plane" style="color:var(--gold);margin-right:12px;font-size:1.3rem;"></i>${d.formTitle}`);
+  s('lblName', d.lblName); s('lblPhone', d.lblPhone); s('lblVehicle', d.lblVehicle); s('lblMsg', d.lblMsg);
+  s('btnText', d.btnSubmit);
+  p('inputName', d.phName); p('inputPhone', d.phPhone || '+251...'); p('inputVehicle', d.phVehicle); p('txtMessage', d.phMsg);
+  s('mob-home', d.navHome); s('mob-cars', d.navCars); s('mob-updates', d.navUpdates); s('mob-inquire', d.navInquire);
+  document.documentElement.lang = lang;
+}
+
+/* ─── LANGUAGE BUTTON GROUP ─── */
+let currentLang = 'en';
+function setLang(btn, lang) {
+  currentLang = lang;
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  changeLanguage(lang);
+}
+
+document.addEventListener('DOMContentLoaded', () => changeLanguage('en'));
+
+/* ─── SMOOTH ANCHOR SCROLLING (consistent across browsers) ─── */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      const headerH = document.getElementById('site-header').offsetHeight;
+      const top = target.getBoundingClientRect().top + window.scrollY - headerH - 16;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
+});
+
+/* ─── KEYBOARD: Close mobile menu on Escape ─── */
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && mobOpen) closeMobMenu();
+  if (e.key === 'Escape') closeModal();
+});
+
+
+
+/* --- SCRIPT BLOCK --- */
+
+
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How can I buy a car with a bank loan or finance in Ethiopia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To secure a car loan in Ethiopia, you typically need a valid commercial bank account, proof of steady monthly income, a proforma invoice from the seller, and a down payment ranging from 30% to 50% depending on the bank's asset financing policies."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are Electric Vehicles (EVs) trending in Addis Ababa, and what are their prices?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "EVs like BYD and Changan have surged in popularity due to low operating costs and exemption from certain import tariffs. Compact city EVs start around 2.5 million ETB, while premium electric SUVs can exceed 6 million ETB in 2026."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it possible to buy a car directly from the owner without broker commission in Ethiopia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. BEKI AUTOCAR connects you directly with private owners and certified sellers, enabling a fully transparent, commission-free transaction in Addis Ababa and across Ethiopia."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What popular car models are available in Addis Ababa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Popular models include the Suzuki Dzire, Suzuki Swift, Toyota Vitz, Toyota Corolla, and Toyota Hilux Revo. For electric vehicles, the BYD Seagull, BYD Song Plus, Volkswagen ID4/ID6, and Changan Benben E-Star are widely available."
+      }
+    }
+  ]
+}
+
+
+/* --- SCRIPT BLOCK --- */
+
+
+(function(){
+
+  /* ── All searchable data — mirrors CARS array + site sections ── */
+  const GS_CARS = [];  /* populated after CARS array is defined */
+  const GS_SECTIONS = [
+    { label:'Live Inventory',   icon:'fa-car',         href:'#new-cars',          desc:'Browse all cars for sale & rent' },
+    { label:'Services',         icon:'fa-star',        href:'#services',          desc:'Import sourcing, rental & brokerage' },
+    { label:'Telegram Updates', icon:'fa-brands fa-telegram', href:'#telegram-updates', desc:'Latest arrivals & price drops' },
+    { label:'Our Showroom',     icon:'fa-map-pin',     href:'#showroom',          desc:'Visit us in Addis Ababa' },
+    { label:'Contact / Inquire',icon:'fa-paper-plane', href:'#contact',           desc:'Send inquiry or get a callback' },
+  ];
+
+  const SUGGESTIONS = ['Hyundai Tucson','Toyota Vitz','Suzuki Dzire','SUV','For Sale','For Rent','Automatic','Petrol','EV'];
+
+  let gsFocusIdx = -1;
+  let gsOpen = false;
+  let gsClickingDropdown = false;
+
+  /* ── DOM refs (resolved after DOM ready) ── */
+  function $(id){ return document.getElementById(id); }
+
+  /* ── Populate GS_CARS from the live CARS array ── */
+  function gsSync(){
+    GS_CARS.length = 0;
+    /* CARS is defined in the inventory IIFE scope — read via DOM data */
+    const stored = window.__GS_CARS__;
+    if (stored) stored.forEach(c => GS_CARS.push(c));
+  }
+
+  /* ── Highlight match in string ── */
+  function gsHighlight(str, q){
+    if (!q) return str;
+    const re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + ')', 'gi');
+    return String(str).replace(re, '<span class="gs-highlight">$1</span>');
+  }
+
+  /* ── Search logic ── */
+  function gsSearch(q){
+    q = q.trim().toLowerCase();
+    if (!q) return [];
+    return GS_CARS.filter(c => {
+      const blob = [c.make, c.model, String(c.year), c.fuel, c.transmission,
+        c.bodyType||'', c.origin||'', c.condition||'', c.priceLabel,
+        c.category==='sale'?'for sale':'for rent',
+        ...(c.features||[])
+      ].join(' ').toLowerCase();
+      return blob.includes(q);
+    });
+  }
+
+  /* ── Open / close dropdown ── */
+  function gsShowDropdown(){
+    const dd = $('gs-dropdown');
+    if (!dd) return;
+    dd.style.display = 'block';
+    gsOpen = true;
+  }
+  function gsHideDropdown(){
+    const dd = $('gs-dropdown');
+    if (!dd) return;
+    dd.style.display = 'none';
+    gsOpen = false;
+    gsFocusIdx = -1;
+  }
+
+  /* ── Render suggestions (shown when input empty) ── */
+  function gsRenderSuggestions(){
+    $('gs-suggestions').style.display = 'block';
+    $('gs-results-list').style.display = 'none';
+    $('gs-no-results').style.display   = 'none';
+    $('gs-result-label').textContent   = 'Quick Search';
+    $('gs-see-all').style.display      = 'none';
+
+    /* Pills */
+    $('gs-suggestion-pills').innerHTML = SUGGESTIONS.map(s =>
+      `<button class="gs-suggestion-pill" onclick="gsFillSuggestion('${s}')">${s}</button>`
+    ).join('');
+
+    /* Quick nav links */
+    const saleCount = GS_CARS.filter(c=>c.category==='sale').length;
+    const rentCount = GS_CARS.filter(c=>c.category==='rent').length;
+    $('gs-quick-links').innerHTML = [
+      {icon:'fa-tag',   label:'Cars for Sale',  count:`${saleCount} listings`, href:'#new-cars', cat:'sale'},
+      {icon:'fa-key',   label:'Cars for Rent',  count:`${rentCount} listings`, href:'#new-cars', cat:'rent'},
+      {icon:'fa-bolt',  label:'Urgent Listings',count:GS_CARS.filter(c=>c.urgent).length+' car', href:'#new-cars', cat:'all'},
+      {icon:'fa-brands fa-telegram', label:'Telegram Channel', count:'Live updates', href:'https://t.me/bekiautocar', ext:true},
+    ].map(l => `
+      <${l.ext?`a href="${l.href}" target="_blank"`:`a href="${l.href}"`} class="gs-quick-link" onclick="${l.cat?`gsFilterAndGo('${l.cat}')`:'gsHideDropdown()'}">
+        <span class="gs-quick-link-icon"><i class="fa-solid ${l.icon}"></i></span>
+        <span class="gs-quick-link-label">${l.label}</span>
+        <span class="gs-quick-link-count">${l.count}</span>
+      </a>`).join('');
+  }
+
+  /* ── Render search results ── */
+  function gsRenderResults(results, q){
+    $('gs-suggestions').style.display = 'none';
+    $('gs-no-results').style.display  = 'none';
+    $('gs-results-list').style.display = 'block';
+    $('gs-result-label').textContent  = results.length + ' result' + (results.length!==1?'s':'') + ' found';
+    $('gs-see-all').style.display     = results.length > 0 ? 'inline' : 'none';
+
+    const list = $('gs-results-list');
+    if (!results.length){
+      $('gs-results-list').style.display = 'none';
+      $('gs-no-results').style.display   = 'block';
+      $('gs-result-label').textContent   = 'No results';
+      $('gs-see-all').style.display      = 'none';
+      return;
+    }
+
+    list.innerHTML = results.slice(0, 8).map((c, i) => {
+      const name = gsHighlight(c.make + ' ' + c.model, q);
+      const meta = [c.year, c.transmission, c.fuel, c.mileage].filter(Boolean).join(' · ');
+      let badges = `<span class="gs-result-badge ${c.category==='sale'?'gs-badge-sale':'gs-badge-rent'}">${c.category==='sale'?'Sale':'Rent'}</span>`;
+      if (c.urgent) badges += ` <span class="gs-result-badge gs-badge-urgent">Urgent</span>`;
+      return `
+        <div class="gs-result-item" data-idx="${i}" data-id="${c.id}"
+          onmousedown="gsClickingDropdown=true"
+          onclick="gsPickResult(${c.id})"
+          onmouseenter="gsSetFocus(${i})">
+          <img class="gs-result-img" src="${c.img}" alt="${c.make} ${c.model}"
+            onerror="this.style.background='var(--bg-page)';this.src=''"
+            loading="lazy">
+          <div class="gs-result-info">
+            <div class="gs-result-name">${name}</div>
+            <div class="gs-result-meta">${meta}</div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex-shrink:0;">
+            <span class="gs-result-price">${c.priceLabel}</span>
+            <span style="display:flex;gap:4px;">${badges}</span>
+          </div>
+        </div>`;
+    }).join('');
+
+    if (results.length > 8){
+      list.innerHTML += `<div style="text-align:center;padding:10px;"><a href="#new-cars" onclick="gsGoToSection()" style="font-size:0.72rem;font-weight:700;color:var(--gold);font-family:var(--sans);">+ ${results.length-8} more results →</a></div>`;
+    }
+  }
+
+  /* ── Public handlers ── */
+  window.gsHandleInput = function(val){
+    const clearBtn = $('gs-clear');
+    if (clearBtn) clearBtn.style.display = val ? 'block' : 'none';
+    gsSync();
+    gsShowDropdown();
+    gsFocusIdx = -1;
+    if (!val.trim()){
+      gsRenderSuggestions();
+    } else {
+      const results = gsSearch(val);
+      gsRenderResults(results, val.trim().toLowerCase());
+    }
+    /* also sync to inv-search if visible */
+    const invSearch = $('inv-search');
+    if (invSearch){ invSearch.value = val; if(window.invFilter) window.invFilter(); }
+  };
+
+  window.gsOnFocus = function(){
+    gsSync();
+    gsShowDropdown();
+    const val = $('global-search-input').value;
+    if (!val.trim()) gsRenderSuggestions();
+    else { gsRenderResults(gsSearch(val), val.trim().toLowerCase()); }
+    /* Expand box */
+    $('global-search-box').style.borderColor = 'var(--gold)';
+    $('global-search-box').style.boxShadow   = '0 0 0 3px rgba(201,162,39,0.12)';
+  };
+
+  window.gsOnBlur = function(){
+    if (gsClickingDropdown){ gsClickingDropdown=false; return; }
+    setTimeout(()=>{
+      gsHideDropdown();
+      $('global-search-box').style.borderColor = '';
+      $('global-search-box').style.boxShadow   = '';
+    }, 160);
+  };
+
+  window.gsClear = function(){
+    const inp = $('global-search-input');
+    inp.value = '';
+    $('gs-clear').style.display = 'none';
+    gsRenderSuggestions();
+    inp.focus();
+    const invSearch = $('inv-search');
+    if (invSearch){ invSearch.value=''; if(window.invFilter) window.invFilter(); }
+  };
+
+  window.gsFillSuggestion = function(text){
+    const inp = $('global-search-input');
+    inp.value = text;
+    $('gs-clear').style.display = 'block';
+    gsSync();
+    const results = gsSearch(text);
+    gsRenderResults(results, text.toLowerCase());
+    /* sync to inv section */
+    const invSearch = $('inv-search');
+    if (invSearch){ invSearch.value=text; if(window.invFilter) window.invFilter(); }
+  };
+
+  window.gsPickResult = function(id){
+    gsHideDropdown();
+    $('global-search-input').blur();
+    /* scroll to inventory and open modal */
+    const section = document.getElementById('new-cars');
+    if (section){
+      const hh = document.getElementById('site-header').offsetHeight;
+      window.scrollTo({ top: section.getBoundingClientRect().top + window.scrollY - hh - 16, behavior:'smooth' });
+    }
+    setTimeout(()=>{ if(window.invOpenModal) window.invOpenModal(id); }, 420);
+  };
+
+  window.gsGoToSection = function(){
+    gsHideDropdown();
+    const q = $('global-search-input').value;
+    const invSearch = $('inv-search');
+    if (invSearch && q){ invSearch.value=q; if(window.invFilter) window.invFilter(); }
+    const section = document.getElementById('new-cars');
+    if (section){
+      const hh = document.getElementById('site-header').offsetHeight;
+      window.scrollTo({ top: section.getBoundingClientRect().top + window.scrollY - hh - 16, behavior:'smooth' });
+    }
+  };
+
+  window.gsFilterAndGo = function(cat){
+    gsHideDropdown();
+    /* trigger pill tab */
+    const pill = document.querySelector(`.inv-pill[data-cat="${cat}"]`);
+    if (pill && window.invSetCat) window.invSetCat(pill, cat);
+    const section = document.getElementById('new-cars');
+    if (section){
+      const hh = document.getElementById('site-header').offsetHeight;
+      window.scrollTo({ top: section.getBoundingClientRect().top + window.scrollY - hh - 16, behavior:'smooth' });
+    }
+  };
+
+  /* ── Keyboard nav ── */
+  window.gsKeyNav = function(e){
+    const items = document.querySelectorAll('.gs-result-item');
+    if (!items.length) return;
+    if (e.key === 'ArrowDown'){
+      e.preventDefault();
+      gsFocusIdx = Math.min(gsFocusIdx+1, items.length-1);
+      gsSetFocus(gsFocusIdx);
+    } else if (e.key === 'ArrowUp'){
+      e.preventDefault();
+      gsFocusIdx = Math.max(gsFocusIdx-1, 0);
+      gsSetFocus(gsFocusIdx);
+    } else if (e.key === 'Enter'){
+      if (gsFocusIdx >= 0 && items[gsFocusIdx]){
+        items[gsFocusIdx].click();
+      } else {
+        gsGoToSection();
+      }
+    } else if (e.key === 'Escape'){
+      gsHideDropdown();
+      $('global-search-input').blur();
+    }
+  };
+
+  window.gsSetFocus = function(idx){
+    document.querySelectorAll('.gs-result-item').forEach((el,i)=>{
+      el.classList.toggle('gs-focused', i===idx);
+    });
+    gsFocusIdx = idx;
+  };
+
+  /* ── Dismiss on outside click ── */
+  document.addEventListener('click', function(e){
+    const wrap = $('global-search-wrap');
+    if (wrap && !wrap.contains(e.target)) gsHideDropdown();
+  });
+
+  /* ── Init: render suggestions on load ── */
+  document.addEventListener('DOMContentLoaded', function(){
+    gsSync();
+    gsRenderSuggestions();
+  });
+
+})();
+
+
+/* --- SCRIPT BLOCK --- */
+
+
+/* ═══════════ REFINEMENT LAYER LOGIC ═══════════ */
+(function(){
+  'use strict';
+  var reduce = window.matchMedia &&
+               window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ── 1 · PRELOADER dismiss (load + hard timeout fail-safe) ── */
+  function hidePreloader(){
+    var p = document.getElementById('rf-preloader');
+    if (p && !p.classList.contains('rf-hidden')) p.classList.add('rf-hidden');
+  }
+  window.addEventListener('load', function(){ setTimeout(hidePreloader, reduce ? 0 : 450); });
+  setTimeout(hidePreloader, 4000);            // never trap the user
+
+  /* ── 2 · SKIP LINK (injected, points at hero) ── */
+  var skip = document.createElement('a');
+  skip.href = '#home'; skip.className = 'rf-skip-link'; skip.textContent = 'Skip to content';
+  document.body.insertBefore(skip, document.body.firstChild);
+
+  /* ── 3 · SCROLL REVEAL ── */
+  function tagReveals(){
+    var sel = '#services .svc-card, #services .section-head,'
+            + '#telegram-updates .section-head, #showroom .section-head,'
+            + '#founder, #contact .section-head, footer';
+    document.querySelectorAll(sel).forEach(function(el){
+      if (!el.classList.contains('rf-reveal')) el.classList.add('rf-reveal');
+    });
+  }
+  function runObserver(){
+    if (reduce || !('IntersectionObserver' in window)){
+      document.querySelectorAll('.rf-reveal').forEach(function(el){el.classList.add('rf-in');});
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add('rf-in'); io.unobserve(e.target); }
+      });
+    }, { threshold:0.12, rootMargin:'0px 0px -8% 0px' });
+    document.querySelectorAll('.rf-reveal').forEach(function(el){ io.observe(el); });
+  }
+  document.addEventListener('DOMContentLoaded', function(){ tagReveals(); runObserver(); });
+
+  /* ── 4 · MOBILE DRAWER stagger hook (wraps existing toggle) ── */
+  var _origToggle = window.toggleMobMenu;
+  if (typeof _origToggle === 'function'){
+    window.toggleMobMenu = function(){
+      _origToggle.apply(this, arguments);
+      var nav = document.getElementById('mob-nav');
+      if (nav) requestAnimationFrame(function(){ nav.classList.toggle('rf-open'); });
+    };
+  }
+
+  /* ── 5 · TOAST ── */
+  var toastTimer;
+  window.rfToast = function(msg, icon){
+    var t = document.getElementById('rf-toast');
+    document.getElementById('rf-toast-msg').textContent = msg;
+    t.querySelector('i').className = 'fa-solid ' + (icon || 'fa-circle-check');
+    t.classList.add('rf-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ t.classList.remove('rf-show'); }, 3200);
+  };
+
+  /* ═══════════ AUTH / PROFILE / DASHBOARD ═══════════ */
+  var KEY = 'rf_user';
+  var state = { mode:'signin', role:'buyer', pendingCarId:null };
+
+  function load(){ try{ return JSON.parse(localStorage.getItem(KEY)); }catch(e){ return null; } }
+  function save(u){ try{ localStorage.setItem(KEY, JSON.stringify(u)); }catch(e){} }
+  function clear(){ try{ localStorage.removeItem(KEY); }catch(e){} }
+  function initials(name){
+    if(!name) return 'U';
+    var p = name.trim().split(/\s+/);
+    return ((p[0]||'')[0] || '' ).concat((p[1]||'')[0] || '').toUpperCase() || 'U';
+  }
+
+  /* header account button reflects auth state */
+  function paintAccountBtn(){
+    var btn = document.getElementById('rf-account-btn');
+    if(!btn) return;
+    var u = load();
+    if (u){
+      btn.querySelector('.rf-avatar').textContent = initials(u.name || u.email);
+      btn.querySelector('.rf-account-label').textContent = (u.name ? u.name.split(' ')[0] : 'Account');
+    } else {
+      btn.querySelector('.rf-avatar').innerHTML = '<i class="fa-solid fa-user" style="font-size:.6rem;"></i>';
+      btn.querySelector('.rf-account-label').textContent = 'Sign In';
+    }
+  }
+
+  var V = {
+    name:  function(v){ return v.trim().length >= 2; },
+    email: function(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()); },
+    phone: function(v){ return /^(\+251|0)?9\d{8}$/.test(v.replace(/[\s-]/g,'')); },
+    pass:  function(v){ return v.length >= 6; }
+  };
+  var FIELD = { name:'rf-f-name', email:'rf-f-email', phone:'rf-f-phone', pass:'rf-f-pass' };
+  var INPUT = { name:'rf-i-name', email:'rf-i-email', phone:'rf-i-phone', pass:'rf-i-pass' };
+
+  function setValidity(field, ok, touched){
+    var wrap = document.getElementById(FIELD[field]);
+    if(!wrap) return;
+    wrap.classList.toggle('rf-valid', ok);
+    wrap.classList.toggle('rf-invalid', touched && !ok);
+  }
+
+  window.rfAuth = {
+    open: function(carId){
+      state.pendingCarId = carId || null;
+      this.applyMode();
+      var ov = document.getElementById('rf-auth-overlay');
+      ov.classList.add('rf-show');
+      document.body.style.overflow = 'hidden';
+      var u = load();
+      if (u){ this.showDashboard(u); }
+      else {
+        document.getElementById('rf-dash').classList.remove('rf-show');
+        document.getElementById('rf-auth-form').style.display = 'block';
+        // autofill remembered email
+        var last = localStorage.getItem('rf_last_email');
+        if (last){ document.getElementById('rf-i-email').value = last; }
+        setTimeout(function(){
+          var f = document.getElementById(u ? null : 'rf-i-email');
+          if (f) f.focus();
+        }, 320);
+      }
+    },
+    close: function(){
+      document.getElementById('rf-auth-overlay').classList.remove('rf-show');
+      document.body.style.overflow = '';
+    },
+    backdrop: function(e){ if (e.target === document.getElementById('rf-auth-overlay')) this.close(); },
+
+    role: function(r){
+      state.role = r;
+      document.getElementById('rf-role-buyer').classList.toggle('rf-active', r==='buyer');
+      document.getElementById('rf-role-seller').classList.toggle('rf-active', r==='seller');
+      document.getElementById('rf-role-buyer').setAttribute('aria-pressed', r==='buyer');
+      document.getElementById('rf-role-seller').setAttribute('aria-pressed', r==='seller');
+    },
+
+    toggleMode: function(){
+      state.mode = (state.mode === 'signin') ? 'signup' : 'signin';
+      this.applyMode();
+    },
+    applyMode: function(){
+      var signup = state.mode === 'signup';
+      document.getElementById('rf-auth-title').textContent = signup ? 'Create your account' : 'Welcome back';
+      document.getElementById('rf-auth-sub').textContent = signup
+        ? 'Join free to unlock prices, full specs & direct seller contact.'
+        : 'Sign in to view full vehicle details, prices & seller contact.';
+      document.getElementById('rf-role-row').style.display = signup ? 'flex' : 'none';
+      document.getElementById('rf-f-name').style.display   = signup ? 'block' : 'none';
+      document.getElementById('rf-f-phone').style.display  = signup ? 'block' : 'none';
+      document.getElementById('rf-consent').style.display  = signup ? 'block' : 'none';
+      document.getElementById('rf-i-pass').setAttribute('autocomplete', signup ? 'new-password' : 'current-password');
+      document.querySelector('#rf-submit .rf-btn-text').textContent = signup ? 'Create Account' : 'Sign In';
+      document.getElementById('rf-switch-text').textContent = signup ? 'Already have an account?' : 'New to Beki AutoCar?';
+      document.getElementById('rf-switch-btn').textContent  = signup ? 'Sign in instead' : 'Create an account';
+      // reset validation visuals
+      ['name','email','phone','pass'].forEach(function(f){
+        var w = document.getElementById(FIELD[f]); if(w) w.classList.remove('rf-valid','rf-invalid');
+      });
+    },
+
+    live: function(field){
+      var v = document.getElementById(INPUT[field]).value;
+      setValidity(field, V[field](v), v.length > 0);
+    },
+
+    activeFields: function(){
+      return state.mode === 'signup' ? ['name','email','phone','pass'] : ['email','pass'];
+    },
+
+    submit: function(){
+      var self = this, ok = true;
+      this.activeFields().forEach(function(f){
+        var valid = V[f](document.getElementById(INPUT[f]).value);
+        setValidity(f, valid, true);
+        if (!valid) ok = false;
+      });
+      if (!ok){
+        var firstBad = document.querySelector('.rf-field.rf-invalid input');
+        if (firstBad) firstBad.focus();
+        return;
+      }
+      var btn = document.getElementById('rf-submit');
+      btn.classList.add('rf-loading'); btn.disabled = true;
+      var email = document.getElementById('rf-i-email').value.trim();
+      var user = {
+        name:  document.getElementById('rf-i-name').value.trim() || email.split('@')[0],
+        email: email,
+        phone: document.getElementById('rf-i-phone').value.trim(),
+        role:  state.mode === 'signup' ? state.role : (load() && load().role) || 'buyer',
+        since: Date.now(),
+        saved: [], views: 0, inquiries: 0
+      };
+      // simulate async auth
+      setTimeout(function(){
+        btn.classList.remove('rf-loading'); btn.disabled = false;
+        save(user);
+        try{ localStorage.setItem('rf_last_email', email); }catch(e){}
+        paintAccountBtn();
+        rfToast(state.mode==='signup' ? 'Account created — welcome!' : 'Signed in successfully', 'fa-circle-check');
+        self.showDashboard(user);
+        // if a car detail was pending, reopen it now unlocked
+        if (state.pendingCarId != null && typeof window.invOpenModal === 'function'){
+          var pend = state.pendingCarId; state.pendingCarId = null;
+          self.close();
+          setTimeout(function(){ window.invOpenModal(pend); }, 260);
+        }
+      }, reduce ? 100 : 850);
+    },
+
+    showDashboard: function(u){
+      document.getElementById('rf-auth-form').style.display = 'none';
+      document.getElementById('rf-role-row').style.display = 'none';
+      document.getElementById('rf-consent').style.display = 'none';
+      document.querySelector('.rf-switch').style.display = 'none';
+      document.getElementById('rf-auth-title').textContent = 'Your account';
+      document.getElementById('rf-auth-sub').textContent = 'Manage your Beki AutoCar activity.';
+      document.getElementById('rf-dash-name').textContent = u.name || u.email;
+      var roleEl = document.getElementById('rf-dash-role');
+      roleEl.innerHTML = '<i class="fa-solid fa-circle-check"></i> ' + (u.role === 'seller' ? 'Seller' : 'Buyer');
+      document.getElementById('rf-stat-saved').textContent = (u.saved||[]).length;
+      document.getElementById('rf-stat-views').textContent = u.views || 0;
+      document.getElementById('rf-stat-inq').textContent   = u.inquiries || 0;
+      // role-specific quick actions
+      var acts = (u.role === 'seller') ? [
+        ['fa-plus','List a vehicle','Post your car to Beki AutoCar'],
+        ['fa-chart-line','My listings','Track views & inquiries'],
+        ['fa-headset','Seller support','Talk to a broker on Telegram']
+      ] : [
+        ['fa-heart','Saved vehicles','Cars you bookmarked'],
+        ['fa-bell','Price alerts','Get notified on drops'],
+        ['fa-headset','Buyer support','Chat with Beki on Telegram']
+      ];
+      document.getElementById('rf-dash-actions').innerHTML = acts.map(function(a){
+        return '<button class="rf-dash-act" onclick="rfAuth.dashAction(\''+a[1]+'\')">'
+             + '<i class="fa-solid '+a[0]+'"></i><div><b>'+a[1]+'</b><small>'+a[2]+'</small></div>'
+             + '<i class="fa-solid fa-chevron-right" style="color:var(--text-muted);font-size:.7rem;"></i></button>';
+      }).join('');
+      document.getElementById('rf-dash').classList.add('rf-show');
+    },
+
+    dashAction: function(label){
+      if (/support/i.test(label)){ window.open('https://t.me/Beckyyyyyy','_blank'); return; }
+      rfToast(label + ' — coming soon', 'fa-circle-info');
+    },
+
+    signOut: function(){
+      clear();
+      paintAccountBtn();
+      document.getElementById('rf-dash').classList.remove('rf-show');
+      document.querySelector('.rf-switch').style.display = 'block';
+      state.mode = 'signin'; this.applyMode();
+      document.getElementById('rf-auth-form').style.display = 'block';
+      rfToast('Signed out', 'fa-circle-info');
+      this.close();
+    },
+
+    isAuthed: function(){ return !!load(); },
+    bumpView: function(){
+      var u = load(); if(!u) return;
+      u.views = (u.views||0) + 1; save(u);
+    }
+  };
+
+  /* ── 6 · INJECT ACCOUNT BUTTON into header-right ── */
+  function injectAccountBtn(){
+    var hr = document.querySelector('.header-right');
+    if (!hr || document.getElementById('rf-account-btn')) return;
+    var btn = document.createElement('button');
+    btn.id = 'rf-account-btn';
+    btn.className = 'rf-account-btn';
+    btn.type = 'button';
+    btn.setAttribute('aria-label','Account / sign in');
+    btn.onclick = function(){ rfAuth.open(); };
+    btn.innerHTML = '<span class="rf-avatar"></span><span class="rf-account-label">Sign In</span>';
+    var menuBtn = document.getElementById('mob-menu-btn');
+    if (menuBtn) hr.insertBefore(btn, menuBtn); else hr.appendChild(btn);
+    paintAccountBtn();
+  }
+
+  /* ── 7 · DETAIL GATE: wrap invOpenModal so prices/specs/contact
+        require an account. Preview (image, title, badges) stays open
+        to entice; full detail prompts sign-up. ── */
+  function installGate(){
+    if (typeof window.invOpenModal !== 'function'){ setTimeout(installGate, 200); return; }
+    if (window.__rfGated) return; window.__rfGated = true;
+    var original = window.invOpenModal;
+    window.invOpenModal = function(id){
+      original(id);                       // render the modal as usual
+      var authed = rfAuth.isAuthed();
+      // locate price/specs/contact blocks inside the rendered modal
+      var price = document.getElementById('invModalPrice');
+      var specs = document.getElementById('invModalSpecs');
+      var tg    = document.getElementById('invModalTgNote');
+      var feat  = document.getElementById('invModalFeatures');
+      // remove any prior gate
+      var oldGate = document.getElementById('rf-detail-gate');
+      if (oldGate) oldGate.remove();
+
+      if (authed){
+        rfAuth.bumpView();
+        [price,specs,tg,feat].forEach(function(el){ if(el) el.style.filter=''; });
+        return;
+      }
+      // NOT signed in → blur the sensitive blocks + inject gate CTA
+      [price,specs,feat].forEach(function(el){
+        if(el){ el.style.filter='blur(7px)'; el.style.userSelect='none'; el.style.pointerEvents='none'; }
+      });
+      if (tg) tg.style.display = 'none';
+      var gate = document.createElement('div');
+      gate.id = 'rf-detail-gate'; gate.className = 'rf-gate';
+      gate.innerHTML =
+        '<i class="fa-solid fa-lock rf-lock"></i>'
+       +'<h4>See the full details</h4>'
+       +'<p>Create a free account to unlock the price, full specs, features and seller contact for this vehicle.</p>'
+       +'<button class="rf-btn" style="max-width:260px;margin:0 auto;" onclick="rfAuth.signupFor('+id+')">'
+       +'<span class="rf-btn-text"><i class="fa-solid fa-unlock"></i>&nbsp; Unlock free</span>'
+       +'<span class="rf-pl-ring" aria-hidden="true"></span></button>';
+      if (price && price.parentNode){
+        price.parentNode.insertBefore(gate, price.nextSibling);
+      }
+    };
+  }
+  rfAuth.signupFor = function(id){ state.mode='signup'; rfAuth.open(id); };
+
+  /* ── 8 · keyboard: Esc closes auth, role toggles via Enter/Space ── */
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape'){
+      var ov = document.getElementById('rf-auth-overlay');
+      if (ov && ov.classList.contains('rf-show')) rfAuth.close();
+    }
+  });
+  ['rf-role-buyer','rf-role-seller'].forEach(function(rid){
+    document.addEventListener('keydown', function(e){
+      if (e.target && e.target.id === rid && (e.key==='Enter'||e.key===' ')){
+        e.preventDefault(); e.target.click();
+      }
+    });
+  });
+
+  /* ── INIT ── */
+  document.addEventListener('DOMContentLoaded', function(){
+    injectAccountBtn();
+    installGate();
+  });
+  // header may already exist if DOM parsed; run now too
+  injectAccountBtn(); installGate();
+})();
+
+
+/* --- SCRIPT BLOCK --- */
+
+
+(function() {
+  'use strict';
+
+  /* Custom cursor (desktop only) */
+  if (window.matchMedia('(pointer: fine)').matches) {
+    var cur = document.createElement('div');
+    cur.id = 'fu-cursor';
+    cur.style.cssText = 'position:fixed;width:10px;height:10px;border-radius:50%;background:rgba(201,162,39,0.95);pointer-events:none;z-index:999999;transform:translate(-50%,-50%);top:0;left:0;opacity:0;box-shadow:0 0 12px rgba(201,162,39,0.7);transition:width 0.15s,height 0.15s,background 0.15s,box-shadow 0.15s;';
+    var ring = document.createElement('div');
+    ring.style.cssText = 'position:fixed;width:30px;height:30px;border-radius:50%;border:1px solid rgba(201,162,39,0.28);pointer-events:none;z-index:999998;transform:translate(-50%,-50%);top:0;left:0;opacity:0;transition:all 0.1s ease;';
+    document.body.appendChild(cur); document.body.appendChild(ring);
+    var mx=0,my=0,tx=0,ty=0;
+    document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';cur.style.opacity='1';ring.style.opacity='0.8';});
+    (function anim(){tx+=(mx-tx)*0.15;ty+=(my-ty)*0.15;ring.style.left=tx+'px';ring.style.top=ty+'px';requestAnimationFrame(anim);})();
+    document.querySelectorAll('a,button,.inv-card,.service-card').forEach(function(el){
+      el.addEventListener('mouseenter',function(){cur.style.width='16px';cur.style.height='16px';cur.style.background='rgba(0,212,255,0.95)';cur.style.boxShadow='0 0 18px rgba(0,212,255,0.7)';ring.style.width='44px';ring.style.height='44px';ring.style.borderColor='rgba(0,212,255,0.22)';});
+      el.addEventListener('mouseleave',function(){cur.style.width='10px';cur.style.height='10px';cur.style.background='rgba(201,162,39,0.95)';cur.style.boxShadow='0 0 12px rgba(201,162,39,0.7)';ring.style.width='30px';ring.style.height='30px';ring.style.borderColor='rgba(201,162,39,0.28)';});
+    });
+  }
+
+  /* Scroll-reveal on rf-reveal elements */
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('rf-in');obs.unobserve(e.target);}});
+    },{threshold:0.1});
+    document.querySelectorAll('.rf-reveal').forEach(function(el){obs.observe(el);});
+  } else {
+    document.querySelectorAll('.rf-reveal').forEach(function(el){el.classList.add('rf-in');});
+  }
+
+  /* Stat counter animation */
+  var statDone = false;
+  var statObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting && !statDone){
+        statDone = true;
+        document.querySelectorAll('.hero-stat-num').forEach(function(el){
+          var txt = el.textContent.trim();
+          var num = parseInt(txt.replace(/[^0-9]/g,''),10);
+          if(isNaN(num)||num===0) return;
+          var suffix = txt.replace(/[0-9]/g,'');
+          var s = 0, step = num/70;
+          var t = setInterval(function(){s=Math.min(s+step,num);el.textContent=Math.floor(s)+suffix;if(s>=num)clearInterval(t);},18);
+        });
+      }
+    });
+  },{threshold:0.5});
+  var stats = document.querySelector('.hero-stats');
+  if(stats) statObs.observe(stats);
+
+  /* Announcement bar hide on scroll down */
+  var bar = document.getElementById('fu-announce-bar');
+  var lastScroll = 0;
+  if(bar){
+    bar.style.transition = 'max-height 0.35s ease, padding 0.35s ease, opacity 0.35s ease';
+    window.addEventListener('scroll',function(){
+      if(window.scrollY > lastScroll && window.scrollY > 60){
+        bar.style.maxHeight='0'; bar.style.paddingTop='0'; bar.style.paddingBottom='0'; bar.style.opacity='0';
+      } else {
+        bar.style.maxHeight='60px'; bar.style.paddingTop='9px'; bar.style.paddingBottom='9px'; bar.style.opacity='1';
+      }
+      lastScroll = window.scrollY;
+    },{passive:true});
+  }
+
+  /* Add reveal animation to cards */
+  document.querySelectorAll('.service-card, .channel-item').forEach(function(el,i){
+    el.classList.add('rf-reveal');
+    el.style.transitionDelay = (i%4*0.07)+'s';
+  });
+
+})();
