@@ -19,7 +19,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
       - name: Reconstruct restored Next.js files
         run: |
           base64 -d recovery/payload-page.gz.b64 | gzip -d > app/page.tsx
