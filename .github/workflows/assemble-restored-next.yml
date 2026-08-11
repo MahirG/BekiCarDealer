@@ -22,7 +22,7 @@ jobs:
       - name: Reconstruct restored Next.js files
         run: |
           base64 -d recovery/payload-page.gz.b64 | gzip -d > app/page.tsx
-          base64 -d recovery/payload-globals.gz.b64 | gzip -d > app/globals.css
+          cat recovery/globals.part00 recovery/globals.part01 recovery/globals.part02 recovery/globals.part03 recovery/globals.part04 recovery/globals.part05 recovery/globals.part06 recovery/globals.part07 | base64 -d | gzip -d > app/globals.css
           base64 -d recovery/payload-layout.gz.b64 | gzip -d > app/layout.tsx
           mkdir -p data public
           cp recovery/compact-content.json data/legacy-content.json
