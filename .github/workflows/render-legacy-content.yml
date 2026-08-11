@@ -1,0 +1,77 @@
+name: Render legacy content
+
+on:
+  push:
+    branches:
+      - agent/recover-legacy-content
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install browser
+        run: |
+          npm install --no-save playwright@1.54.2
+          npx playwright install --with-deps chromium
+      - name: Render historical page and extract final DOM content
+        run: |
+          git show 89496a31d47ad6d6529361f75f8d20694cd8ed53:beki-autocar-futuristic-1.html > /tmp/legacy.html
+          cat > /tmp/render.mjs <<'EOF'
+          import fs from 'node:fs';
+          import { chromium } from 'playwright';
+          const source = fs.readFileSync('/tmp/legacy.html','utf8');
+          const browser = await chromium.launch({headless:true});
+          const page = await browser.newPage({ viewport: { width: 1440, height: 1200 } });
+          const errors=[];
+          page.on('pageerror', e => errors.push(String(e)));
+          await page.setContent(source, {waitUntil:'domcontentloaded', timeout:60000});
+          await page.waitForTimeout(3500);
+          const data = await page.evaluate(() => {
+            const clean = s => (s || '').replace(/\s+/g,' ').trim();
+            const leaf = [];
+            for (const el of document.body.querySelectorAll('*')) {
+              if (['SCRIPT','STYLE','SVG','PATH','NOSCRIPT'].includes(el.tagName)) continue;
+              const direct = Array.from(el.childNodes)
+                .filter(n => n.nodeType === Node.TEXT_NODE)
+                .map(n => clean(n.textContent))
+                .filter(Boolean)
+                .join(' ');
+              if (!direct) continue;
+              const section = el.closest('section,header,nav,main,footer,[id]');
+              leaf.push({
+                tag: el.tagName.toLowerCase(),
+                text: direct,
+                section: section?.id || section?.tagName?.toLowerCase() || '',
+                href: el instanceof HTMLAnchorElement ? el.href : undefined,
+              });
+            }
+            const links = Array.from(document.querySelectorAll('a')).map(a => ({text:clean(a.textContent),href:a.href,target:a.target||''}));
+            const controls = Array.from(document.querySelectorAll('input,textarea,select,option,button')).map(el => ({
+              tag:el.tagName.toLowerCase(), text:clean(el.textContent), type:el.getAttribute('type')||'', name:el.getAttribute('name')||'', value:el.getAttribute('value')||'', placeholder:el.getAttribute('placeholder')||'', aria:el.getAttribute('aria-label')||''
+            }));
+            const images = Array.from(document.images).map(img => ({alt:img.alt||'',title:img.title||'',src:img.src.startsWith('data:')?'[EMBEDDED_DATA]':img.src}));
+            return {title:document.title, leaf, links, controls, images, bodyText:document.body.innerText};
+          });
+          data.errors = errors;
+          fs.mkdirSync('recovery',{recursive:true});
+          fs.writeFileSync('recovery/rendered-content.json', JSON.stringify(data,null,2));
+          await page.screenshot({path:'recovery/legacy-render.png',fullPage:true});
+          await browser.close();
+          EOF
+          node /tmp/render.mjs
+      - name: Commit rendered recovery output
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add recovery/rendered-content.json recovery/legacy-render.png
+          git commit -m "Capture rendered original site content" || exit 0
+          git push
